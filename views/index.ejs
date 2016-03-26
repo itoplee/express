@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="appmodel">
+  <head>
+    <title>angularjs</title>
+      <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="panel panel-primary">
+    	<div class="panel-heading">
+    		<div class="panel-title">面板标题</div>
+    	</div>
+    	<div class="panel-body">
+    		<form class="form-horizontal" ng-controller="appCtrl">
+    			<div class="form-group">
+    				<label class="col-sm-2 control-label">邮箱：</label>
+    				<div class="col-sm-10">
+    					<input type="email" class="form-control" placeholder="请输入邮箱" ng-model="user.email">
+    				</div>
+    			</div>
+    			<div class="form-group">
+    				<label class="col-sm-2 control-label">密码：</label>
+    				<div class="col-sm-10">
+    					<input type="password" class="form-control" placeholder="请输入密码" ng-model="user.password">
+    				</div>
+    			</div>
+    			<div class="form-group">
+    				<div class="col-sm-offset-2 col-sm-10">
+    					<div class="checkbox">
+    						<label>
+    							<input type="checkbox" ng-model="user.autoLogin">自动登录
+    						</label>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="form-group">
+    				<div class="col-sm-offset-2 col-sm-10">
+    					<button class="btn btn-primary" ng-click="setForm()">设置表单</button>
+    				<button class="btn btn-info" ng-click="reSetForm()">重置表单</button>
+    				</div>
+    			</div>
+    		</form>
+    	</div>
+    </div>
+    <script src="/javascripts/angular.min.js" type="text/javascript"></script>
+    <script src="/javascripts/app.js" type="text/javascript"></script>
+  </body>
+</html>
